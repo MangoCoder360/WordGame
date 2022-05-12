@@ -177,7 +177,6 @@ function newColor(){
 randomColor = colors[Math.floor(Math.random() * colors.length)];
 colorBlock.style.background = randomColor;
 colorText.innerHTML = randomColor;
-recognition.start();
 }
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -205,7 +204,7 @@ recognition.addEventListener('result', e => {
       }
   });
 
-  //recognition.addEventListener('end', newColor);
+  recognition.addEventListener('end', recognition.start);
 
   newColor();
 </script>

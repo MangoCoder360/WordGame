@@ -1,4 +1,4 @@
-<title>Word Game</title>
+<title>Say The Color</title>
 <body>
     <div id="colorBlock" width="300px" height="300px"></div>
     <br>
@@ -194,7 +194,7 @@ recognition.addEventListener('result', e => {
       var poopScript = transcript.replace("qwertyuiop1234567890", '');
       document.getElementById("wat").innerHTML = poopScript;
       
-      if(document.getElementById("wat").innerHTML.toLowerCase == randomColor){
+      if(document.getElementById("wat").innerHTML.toLowerCase() == randomColor){
             alert("You got it!");
             document.getElementById("wat").innerHTML = "";
 

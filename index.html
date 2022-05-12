@@ -201,11 +201,11 @@ recognition.addEventListener('result', e => {
       }
 
       if (e.results[0].isFinal) {
-        // final
+        newColor();
       }
   });
 
-  recognition.addEventListener('end', newColor);
+  //recognition.addEventListener('end', newColor);
 
   newColor();
 </script>

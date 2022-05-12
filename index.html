@@ -178,6 +178,7 @@ randomColor = colors[Math.floor(Math.random() * colors.length)];
 colorBlock.style.background = randomColor;
 colorText.innerHTML = randomColor;
 }
+newColor();
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
@@ -206,6 +207,5 @@ recognition.addEventListener('result', e => {
 
   recognition.addEventListener('end', recognition.start);
 
-  newColor();
   recognition.start();
 </script>
